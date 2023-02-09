@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: "Updating Repositories for Aptitude"
+    apt:
+      update_cache: yes
+
+  - name: "Installing Network Utilities"
+    apt:
+      name: net-tools
+
+  - name: "Installing Share Drive Utilities"
+    apt:
+      name: cifs-utils
+
+  - name: "Installing Terminal Multiplexer"
+    apt:
+      name: tmux
