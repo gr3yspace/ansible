@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: "Updating Repositories for Aptitude"
+    apt:
+      update_cache: yes
+
+  - name: "Installing Docker Core dependencies"
+    apt:
+      name: docker
+
+  - name: "Installing Docker-Compose package"
+    apt:
+      name: docker-compose
+
+  - name: "Installing Container Daemon dependencies"
+    apt:
+      name: containerd
