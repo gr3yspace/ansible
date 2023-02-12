@@ -19,3 +19,11 @@
   - name: "Installing Terminal Multiplexer"
     apt:
       name: tmux
+
+  - name: "Installing Host Discovery Utility"
+    apt:
+      name: netdiscover
+
+  - name: "Installing Port Scanner"
+    apt:
+      name: nmap
