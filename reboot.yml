@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: true
+  tasks:
+
+  - name: "Reboot a Linux machine"
+    reboot:
+      reboot_timeout: 1800

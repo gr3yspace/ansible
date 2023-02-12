@@ -1,7 +1,13 @@
-- hosts: "*"
+---
+- hosts: all
   become: yes
+  gather_facts: true
   tasks:
     - name: "Updating and Upgrading Apt Packages"
       apt:
         update_cache: yes
         upgrade: 'yes'
+
+#    - name: Reboot a Linux machine
+#      reboot:
+#        reboot_timeout: 1800
